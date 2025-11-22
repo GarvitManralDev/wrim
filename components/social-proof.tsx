@@ -1,4 +1,6 @@
-import { motion } from 'framer-motion';
+"use client";
+
+import { motion } from "motion/react";
 import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
@@ -26,7 +28,7 @@ const logos = ['Acme Corp', 'TechStart', 'InnovateLab', 'FutureScale', 'CloudNin
 
 export default function SocialProof() {
   return (
-    <section className="py-24 px-6 bg-slate-50">
+    <section className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white dark:from-slate-900 dark:to-slate-800">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -35,10 +37,10 @@ export default function SocialProof() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 bg-clip-text text-transparent mb-4">
             Trusted By Industry Leaders
           </h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Join thousands of companies already transforming their workflows
           </p>
         </motion.div>
@@ -53,7 +55,7 @@ export default function SocialProof() {
           {logos.map((logo, index) => (
             <div
               key={index}
-              className="flex items-center justify-center h-16 text-slate-400 font-semibold hover:text-slate-600 transition-colors"
+              className="flex items-center justify-center h-16 text-gray-400 dark:text-gray-500 font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               {logo}
             </div>
@@ -70,23 +72,23 @@ export default function SocialProof() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <Quote className="w-10 h-10 text-blue-600 mb-4" />
+              <Quote className="w-10 h-10 text-blue-600 dark:text-blue-400 mb-4" />
 
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="w-5 h-5 fill-orange-400 text-orange-400" />
                 ))}
               </div>
 
-              <p className="text-slate-700 leading-relaxed mb-6">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                 "{testimonial.content}"
               </p>
 
               <div>
-                <div className="font-semibold text-slate-900">
+                <div className="font-semibold text-gray-900 dark:text-gray-100">
                   {testimonial.name}
                 </div>
-                <div className="text-sm text-slate-600">
+                <div className="text-sm text-gray-600 dark:text-gray-400">
                   {testimonial.role}
                 </div>
               </div>
@@ -103,18 +105,18 @@ export default function SocialProof() {
         >
           <div className="inline-flex items-center gap-8 bg-white rounded-2xl p-8 shadow-lg">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-1">4.9/5</div>
-              <div className="text-sm text-slate-600">Average Rating</div>
+              <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent mb-1">4.9/5</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Average Rating</div>
             </div>
-            <div className="w-px h-12 bg-slate-200"></div>
+            <div className="w-px h-12 bg-gray-200 dark:bg-gray-700"></div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-1">10K+</div>
-              <div className="text-sm text-slate-600">Active Teams</div>
+              <div className="text-4xl font-bold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent mb-1">10K+</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Active Teams</div>
             </div>
-            <div className="w-px h-12 bg-slate-200"></div>
+            <div className="w-px h-12 bg-gray-200 dark:bg-gray-700"></div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-1">99.99%</div>
-              <div className="text-sm text-slate-600">Uptime</div>
+              <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent mb-1">99.99%</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Uptime</div>
             </div>
           </div>
         </motion.div>

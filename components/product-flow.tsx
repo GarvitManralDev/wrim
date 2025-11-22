@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import {
   IconBrain,
   IconPencil,
@@ -45,13 +45,13 @@ const steps = [
 
 export default function ProductFlowAnimated() {
   return (
-    <section className="py-24 px-4 max-w-6xl mx-auto text-center">
+    <section className="py-24 px-4 max-w-6xl mx-auto text-center bg-white dark:bg-slate-900">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-3xl md:text-5xl font-bold"
+        className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 bg-clip-text text-transparent"
       >
         How We Build Technology That Lasts Forever
       </motion.h2>
@@ -61,7 +61,7 @@ export default function ProductFlowAnimated() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
         viewport={{ once: true }}
-        className="mt-3 text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto md:text-lg"
+        className="mt-3 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto md:text-lg"
       >
         A future-proof lifecycle designed for innovation that adapts, grows, and
         stands the test of time — truly immortal.
@@ -82,15 +82,15 @@ export default function ProductFlowAnimated() {
               <motion.div
                 whileHover={{ scale: 1.08 }}
                 transition={{ type: "spring", stiffness: 250, damping: 12 }}
-                className="mb-3 flex h-16 w-16 items-center justify-center rounded-full border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 shadow-md"
+                className="mb-3 flex h-16 w-16 items-center justify-center rounded-full border-2 border-blue-200 dark:border-blue-800 bg-white dark:bg-slate-800 shadow-lg hover:shadow-xl hover:border-blue-400 dark:hover:border-blue-500 transition-colors"
               >
-                <Icon size={30} className="text-black dark:text-white" />
+                <Icon size={30} className="text-blue-600 dark:text-blue-400" />
               </motion.div>
 
-              <h3 className="text-sm font-semibold text-neutral-800 dark:text-neutral-200">
+              <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200">
                 {step.title}
               </h3>
-              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                 {step.desc}
               </p>
 
@@ -101,7 +101,7 @@ export default function ProductFlowAnimated() {
                   whileInView={{ scaleX: 1 }}
                   transition={{ duration: 0.6, delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="hidden md:block h-px w-12 bg-neutral-300 dark:bg-neutral-700 mx-auto mt-6 origin-left"
+                  className="hidden md:block h-0.5 w-12 bg-gradient-to-r from-blue-400 to-orange-400 mx-auto mt-6 origin-left rounded-full"
                 />
               )}
             </motion.div>
