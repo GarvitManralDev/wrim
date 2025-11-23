@@ -1,5 +1,6 @@
 import HeroSectionOne from "@/components/hero-section-demo-1";
 import OurProducts from "@/components/our-products";
+import OurTeam from "@/components/our-team";
 import ProductFlowAnimated from "@/components/product-flow";
 import SocialProof from "@/components/social-proof";
 import FinalCTA from "@/components/final-cta";
@@ -14,11 +15,14 @@ export default function Home() {
       {/* Our Products */}
       <OurProducts />
       
+      {/* Our Team */}
+      <OurTeam />
+      
+      {/* Our Process */}
+      <ProductFlowAnimated />
+      
       {/* Social Proof */}
       <SocialProof />
-      
-      {/* Product Flow */}
-      <ProductFlowAnimated />
       
       {/* Final CTA */}
       <FinalCTA />
